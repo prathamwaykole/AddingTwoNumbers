@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Addition of two numbers</title>
+<style>
+*{font-size:"50px"}
+body{background-color:lightblue;}
+</style>
+</head>
+<body>
+<center>
+<h1>Addition app</h1>
+<form onsubmit="add()">
+<input type="number" step="any" id="num1" placeholder="Please enter number 1"/>
+</br></br>
+<input type="number" step="any" id="num2" placeholder="please ennter number 2"/>
+</br></br>
+<input type="submit" value="add"/>
+</form>
+<h2 id = "msg"/>
+<script>
+function add()
+{
+event.preventDefault();
+let num1=document.getElementById("num1");
+let num2=document.getElementById("num2");
+let msg = document.getElementById("msg");
+
+if(num1.value==="")
+{
+alert("please enter the value of number 1");
+msg.innerHTML="";
+num1.focus();
+return;
+}
+if(num2.value==="")
+{
+alert("please enter the value of number 2");
+msg.innerHTML="";
+num2.focus();
+return;
+}
+
+let n1 = parseFloat(num1.value);
+let n2 = parseFloat(num2.value);
+let a = n1+n2;
+let m = "add="+a.toFixed(2);
+msg.innerHTML=m;
+}
+</script>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
